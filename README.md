@@ -13,7 +13,7 @@ A fun web-based drawing application inspired by childhood creativity. It provide
 
 ## Coming Soon
 - Gallery to save your masterpieces
-- Speed Scribble mode with 5-second timer
+- Speed scribble scrabble mode with timer
 - Collaborative drawing features
 
 ## Built With
