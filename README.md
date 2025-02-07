@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# It's Scribble Scrabble Time!
 
-## Getting Started
+[itsscribblescrabbletime.com](https://itsscribblescrabbletime.com)
 
-First, run the development server:
+![It's Scribble Scrabble Time! Screenshot](/.github/assets/screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What is Scribble Scrabble?
+A fun web-based drawing application inspired by childhood creativity. It provides a simple interface for creating digital scribbles and doodles, perfect for kids and the young at heart.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- Simple, kid-friendly interface 
+- Digital drawing canvas with smooth lines 
+- 12 vibrant colors with randomized palette 
+- Rainbow mode for extra-colorful drawing 
+- Undo/Redo functionality 
+- Works great on tablets and phones 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Coming Soon
+- Gallery to save your masterpieces
+- Speed Scribble mode with 5-second timer
+- Collaborative drawing features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Built With
+Next.js, React, TypeScript, and lots of ❤️
 
-## Learn More
+## License
+The source code for It's Scribble Scrabble Time! is licensed under the MIT License. See the LICENSE file for details.
 
-To learn more about Next.js, take a look at the following resources:
+All drawings created using Scribble Scrabble belong to their respective creators. Users retain full ownership of their creations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
