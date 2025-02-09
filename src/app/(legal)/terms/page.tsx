@@ -34,14 +34,14 @@ const TermsPage: FC = () => {
             <section className="mb-8">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">1. Ownership of Content</h2>
               <ul className="space-y-2 text-gray-600">
-                <li>All drawings and creative works made using It&apos;s Scribble Scrabble Time! belong to their creators.</li>
-                <li>By using It&apos;s Scribble Scrabble Time!, you confirm that you have the right to create and share any content you make using our tools.</li>
+                <li>All drawings and creative works made using It&apos;s Scribble Scrabble Time belong to their creators.</li>
+                <li>By using It&apos;s Scribble Scrabble Time, you confirm that you have the right to create and share any content you make using our tools.</li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">2. Content Storage and Display</h2>
-              <p className="text-gray-600 mb-4">When you save drawings on It&apos;s Scribble Scrabble Time!:</p>
+              <p className="text-gray-600 mb-4">When you save drawings on It&apos;s Scribble Scrabble Time:</p>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>You retain all rights to your creations</li>
                 <li>You grant us permission to store and display your drawings as part of providing our service</li>
@@ -51,7 +51,7 @@ const TermsPage: FC = () => {
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">3. Appropriate Content</h2>
-              <p className="text-gray-600 mb-4">As It&apos;s Scribble Scrabble Time! is designed for children, all content must be:</p>
+              <p className="text-gray-600 mb-4">As It&apos;s Scribble Scrabble Time is designed for children, all content must be:</p>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>Family-friendly</li>
                 <li>Appropriate for all ages</li>
@@ -72,7 +72,7 @@ const TermsPage: FC = () => {
               <h2 className="text-xl font-semibold mb-4 text-gray-800">5. Changes to Terms</h2>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>We may update these terms as we add new features</li>
-                <li>Continued use of It&apos;s Scribble Scrabble Time! means you accept any changes to these terms</li>
+                <li>Continued use of It&apos;s Scribble Scrabble Time means you accept any changes to these terms</li>
               </ul>
             </section>
 
@@ -95,7 +95,7 @@ const TermsPage: FC = () => {
       {/* Footer */}
       <footer className="border-t bg-white mt-16">
         <div className="container mx-auto px-4 py-6 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} It&apos;s Scribble Scrabble Time! All rights reserved.
+          © {new Date().getFullYear()} It&apos;s Scribble Scrabble Time All rights reserved.
         </div>
       </footer>
     </div>
