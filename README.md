@@ -12,7 +12,7 @@ A fun web-based drawing application inspired by childhood creativity. It provide
 - Works great on tablets and phones 
 
 ## Coming Soon
-- Gallery to save your masterpieces
+- Community gallery to save your masterpieces
 - Speed mode with timer
 - Collaborative drawing features
 - Competitive drawing judged by AI

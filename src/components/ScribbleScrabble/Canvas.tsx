@@ -63,17 +63,24 @@ export const Canvas = ({
     if (!ctx) return;
     
     const resizeCanvas = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      
       const container = canvas.parentElement;
       if (!container) return;
       
       const { width, height } = container.getBoundingClientRect();
-      const scale = window.devicePixelRatio;
       
+      // Apply device pixel ratio for sharp rendering
+      const scale = window.devicePixelRatio;
       canvas.width = width * scale;
       canvas.height = height * scale;
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       
+      // Scale the context
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
       ctx.scale(scale, scale);
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';

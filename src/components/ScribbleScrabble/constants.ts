@@ -18,12 +18,16 @@ export const COLORS = [
 export const COLOR_MAP = {
   bubbleGum: COLORS.find(c => c.name === 'Bubble Gum')?.color as string,
   berryPink: COLORS.find(c => c.name === 'Berry Pink')?.color as string,
+  orangePop: COLORS.find(c => c.name === 'Orange Pop')?.color as string,
   mango: COLORS.find(c => c.name === 'Mango')?.color as string,
   sunnyYellow: COLORS.find(c => c.name === 'Sunny Yellow')?.color as string,
   grassGreen: COLORS.find(c => c.name === 'Grass Green')?.color as string,
+  mermaidTail: COLORS.find(c => c.name === 'Mermaid Tail')?.color as string,
   skyBlue: COLORS.find(c => c.name === 'Sky Blue')?.color as string,
   oceanBlue: COLORS.find(c => c.name === 'Ocean Blue')?.color as string,
   magicPurple: COLORS.find(c => c.name === 'Magic Purple')?.color as string,
+  chocolate: COLORS.find(c => c.name === 'Chocolate')?.color as string,
+  midnight: COLORS.find(c => c.name === 'Midnight')?.color as string,
 } as const;
 
 export const RAINBOW_COLORS = [
@@ -48,3 +52,10 @@ export const RAINBOW_GRADIENT = `conic-gradient(
   ${COLOR_MAP.oceanBlue} ${SEGMENT_SIZE * 5}deg ${SEGMENT_SIZE * 6}deg,
   ${COLOR_MAP.magicPurple} ${SEGMENT_SIZE * 6}deg 360deg
 )`;
+
+export interface SavedDrawing {
+  id: string;
+  dataUrl: string;
+  timestamp: number;
+  title: string;
+}

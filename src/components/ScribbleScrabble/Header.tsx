@@ -1,19 +1,24 @@
 // src/components/ScribbleScrabble/Header.tsx
 'use client';
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faUndo, 
   faRedo, 
   faTrashCan, 
-  faCircleInfo 
+  faSave,
+  faImages,
+  faPalette,
+  faCircleInfo, 
 } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 interface HeaderProps {
   onUndo: () => void;
   onRedo: () => void;
   onClear: () => void;
+  onSave: () => void
+  onColorInfo: () => void;
   onInfo: () => void;
   canUndo: boolean;
   canRedo: boolean;
@@ -23,6 +28,8 @@ export const Header = ({
   onUndo,
   onRedo,
   onClear,
+  onSave,
+  onColorInfo,
   onInfo,
   canUndo,
   canRedo,
@@ -65,6 +72,32 @@ export const Header = ({
         </button>
         
         <div className="w-px h-6 bg-gray-200 mx-1"></div>
+        
+        <button 
+          onClick={onSave}
+          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          title="Save Drawing"
+        >
+          <FontAwesomeIcon icon={faSave} className={iconClass} />
+        </button>
+        
+        <Link 
+          href="/gallery"
+          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          title="View Gallery"
+        >
+          <FontAwesomeIcon icon={faImages} className={iconClass} />
+        </Link>
+        
+        <div className="w-px h-6 bg-gray-200 mx-1"></div>
+        
+        <button 
+          onClick={onColorInfo}
+          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          title="Meet the Colors"
+        >
+          <FontAwesomeIcon icon={faPalette} className={iconClass} />
+        </button>
         
         <button 
           onClick={onInfo}

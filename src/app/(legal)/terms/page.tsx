@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft  } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const TermsPage: FC = () => {
   const currentDate = new Date().toLocaleDateString('en-US', {
@@ -12,17 +12,19 @@ const TermsPage: FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <div className="container mx-auto px-4 py-4">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-800"
-        >
-          <FontAwesomeIcon icon={faArrowLeft} className="w-5 h-5" />
-          <span className="hidden sm:inline">Back to Drawing</span>
-        </Link>
-      </div>
+      <nav className="flex justify-between items-center px-4 py-2 bg-white border-b">
+        <div className="flex items-center">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-800"
+          >
+            <FontAwesomeIcon icon={faArrowLeft} className="w-5 h-5" />
+            <span className="font-fredoka">Back to Drawing</span>
+          </Link>
+        </div>
+      </nav>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-4">
@@ -32,26 +34,17 @@ const TermsPage: FC = () => {
             <p className="text-sm text-gray-500 mb-8">Last updated: {currentDate}</p>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">1. Ownership of Content</h2>
-              <ul className="space-y-2 text-gray-600">
-                <li>All drawings and creative works made using It&apos;s Scribble Scrabble Time belong to their creators.</li>
-                <li>By using It&apos;s Scribble Scrabble Time, you confirm that you have the right to create and share any content you make using our tools.</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">2. Content Storage and Display</h2>
-              <p className="text-gray-600 mb-4">When you save drawings on It&apos;s Scribble Scrabble Time:</p>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">1. Ownership and Rights</h2>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
-                <li>You retain all rights to your creations</li>
-                <li>You grant us permission to store and display your drawings as part of providing our service</li>
-                <li>You can delete your content at any time</li>
+                <li>All drawings and creative works made using It's Scribble Scrabble Time belong to their creators</li>
+                <li>Users retain full rights to download, modify, or delete their content</li>
+                <li>By using It's Scribble Scrabble Time, you confirm that you have the right to create and store any content using our tools</li>
               </ul>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">3. Appropriate Content</h2>
-              <p className="text-gray-600 mb-4">As It&apos;s Scribble Scrabble Time is designed for children, all content must be:</p>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">2. Content Guidelines</h2>
+              <p className="text-gray-600 mb-4">As It's Scribble Scrabble Time is designed for children, all content must be:</p>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>Family-friendly</li>
                 <li>Appropriate for all ages</li>
@@ -60,19 +53,42 @@ const TermsPage: FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">4. Privacy</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">3. Privacy and Data Collection</h2>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
-                <li>We do not collect personal information from users</li>
-                <li>Any saved drawings are stored securely</li>
-                <li>We do not share or sell any user data or content</li>
+                <li>We do not collect or store any personal information</li>
+                <li>All drawing data is stored exclusively in your local browser storage</li>
+                <li>No data is transmitted to our servers</li>
+                <li>We do not use cookies or tracking mechanisms</li>
               </ul>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">5. Changes to Terms</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">4. Local Storage and Data Management</h2>
+              <p className="text-gray-600 mb-4">It's Scribble Scrabble Time utilizes browser local storage for drawing data:</p>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
-                <li>We may update these terms as we add new features</li>
-                <li>Continued use of It&apos;s Scribble Scrabble Time means you accept any changes to these terms</li>
+                <li>All drawings are stored locally in your browser's storage</li>
+                <li>Storage is limited to 30 drawings, with oldest drawings being automatically removed when this limit is reached</li>
+                <li>Drawings persist until manually deleted or browser data is cleared</li>
+                <li>Drawings are device and browser-specific and cannot be accessed across different devices or browsers</li>
+              </ul>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">5. Service Limitations</h2>
+              <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                <li>Drawing data is limited to browser local storage capacity</li>
+                <li>No cloud storage or synchronization services are provided</li>
+                <li>Service availability depends on browser compatibility and local storage access</li>
+                <li>We do not guarantee the persistence of drawings beyond browser storage limitations</li>
+              </ul>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">6. Changes to Terms</h2>
+              <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                <li>We reserve the right to modify these terms as features and functionality evolve</li>
+                <li>Continued use of It's Scribble Scrabble Time after changes indicates acceptance of updated terms</li>
+                <li>Material changes to functionality or data handling will be communicated via service updates</li>
               </ul>
             </section>
 
