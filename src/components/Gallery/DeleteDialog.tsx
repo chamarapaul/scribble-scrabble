@@ -2,7 +2,6 @@
 'use client';
 
 import { BaseDialog } from '@/components/BaseDialog';
-import { COLOR_MAP } from '@/components/ScribbleScrabble/constants';
 
 interface DeleteDialogProps {
   open: boolean;
@@ -15,7 +14,7 @@ export const DeleteDialog = ({ open, onOpenChange, onConfirm }: DeleteDialogProp
     <BaseDialog open={open} onOpenChange={onOpenChange} title={'Delete Drawing?'}>
       <div className="space-y-6">
         <p className="text-lg text-gray-700 font-fredoka">
-          Are you sure you want to delete this drawing? This can't be undone.
+          Are you sure you want to delete this drawing? This can&apos;t be undone.
         </p>
         
         <div className="flex flex-col gap-3">

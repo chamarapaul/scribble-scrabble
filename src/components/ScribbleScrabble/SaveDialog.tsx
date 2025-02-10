@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/dialog";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import { COLOR_MAP } from './constants';
 import Link from 'next/link';
 
 interface SaveDialogProps {

@@ -36,15 +36,15 @@ const TermsPage: FC = () => {
             <section className="mb-8">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">1. Ownership and Rights</h2>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
-                <li>All drawings and creative works made using It's Scribble Scrabble Time belong to their creators</li>
+                <li>All drawings and creative works made using It&apos;s Scribble Scrabble Time belong to their creators</li>
                 <li>Users retain full rights to download, modify, or delete their content</li>
-                <li>By using It's Scribble Scrabble Time, you confirm that you have the right to create and store any content using our tools</li>
+                <li>By using It&apos;s Scribble Scrabble Time, you confirm that you have the right to create and store any content using our tools</li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">2. Content Guidelines</h2>
-              <p className="text-gray-600 mb-4">As It's Scribble Scrabble Time is designed for children, all content must be:</p>
+              <p className="text-gray-600 mb-4">As It&apos;s Scribble Scrabble Time is designed for children, all content must be:</p>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>Family-friendly</li>
                 <li>Appropriate for all ages</li>
@@ -64,9 +64,9 @@ const TermsPage: FC = () => {
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold mb-4 text-gray-800">4. Local Storage and Data Management</h2>
-              <p className="text-gray-600 mb-4">It's Scribble Scrabble Time utilizes browser local storage for drawing data:</p>
+              <p className="text-gray-600 mb-4">It&apos;s Scribble Scrabble Time utilizes browser local storage for drawing data:</p>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
-                <li>All drawings are stored locally in your browser's storage</li>
+                <li>All drawings are stored locally in your browser&apos;s storage</li>
                 <li>Storage is limited to 30 drawings, with oldest drawings being automatically removed when this limit is reached</li>
                 <li>Drawings persist until manually deleted or browser data is cleared</li>
                 <li>Drawings are device and browser-specific and cannot be accessed across different devices or browsers</li>
@@ -87,7 +87,7 @@ const TermsPage: FC = () => {
               <h2 className="text-xl font-semibold mb-4 text-gray-800">6. Changes to Terms</h2>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>We reserve the right to modify these terms as features and functionality evolve</li>
-                <li>Continued use of It's Scribble Scrabble Time after changes indicates acceptance of updated terms</li>
+                <li>Continued use of It&apos;s Scribble Scrabble Time after changes indicates acceptance of updated terms</li>
                 <li>Material changes to functionality or data handling will be communicated via service updates</li>
               </ul>
             </section>
