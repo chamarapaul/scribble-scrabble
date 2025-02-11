@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faDownload } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { BreadcrumbNav } from '../BreadcrumbNav';
+import { Footer } from '../Footer';
 import { DeleteDialog } from '../dialogs/Gallery/DeleteDialog';
 import { PreviewDialog } from '../dialogs/Gallery/PreviewDialog';
 import { SavedDrawing } from '@/types/shared';
@@ -50,7 +51,7 @@ const Gallery = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 flex flex-col">
         <BreadcrumbNav currentPage="Gallery" />
         <div className="flex items-center justify-center h-[calc(100vh-57px)]">
           <div className="text-xl text-gray-700 font-fredoka">Loading your masterpieces...</div>
@@ -60,10 +61,10 @@ const Gallery = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <BreadcrumbNav currentPage="Gallery" />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-1">
         {drawings.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-xl text-gray-700 font-fredoka mb-4">No drawings saved yet!</p>
@@ -140,6 +141,8 @@ const Gallery = () => {
         }}
         onNavigate={setPreviewDrawing}
       />
+
+      <Footer />
     </div>
   );
 };

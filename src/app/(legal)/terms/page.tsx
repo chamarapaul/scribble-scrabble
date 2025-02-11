@@ -3,6 +3,7 @@ import { FC } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { Footer } from '@/components/Footer';
 
 const TermsPage: FC = () => {
   const currentDate = new Date().toLocaleDateString('en-US', {
@@ -107,7 +108,7 @@ const TermsPage: FC = () => {
                 If you have any questions about these terms, please contact us at{' '}
                 <a 
                   href="mailto:hello@itsscribblescrabbletime.com" 
-                  className="text-blue-600 hover:text-blue-800 transition-colors"
+                  className="text-gray-600 hover:text-gray-800 transition-colors underline"
                 >
                   hello@itsscribblescrabbletime.com
                 </a>
@@ -117,12 +118,7 @@ const TermsPage: FC = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t bg-white mt-16">
-        <div className="container mx-auto px-4 py-6 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} It&apos;s Scribble Scrabble Time All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
