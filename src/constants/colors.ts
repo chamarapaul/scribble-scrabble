@@ -150,8 +150,8 @@ export const COLORS = [
   export const RAINBOW_STORY = {
       name: 'Rainbow',
       color: RAINBOW_GRADIENT, 
-      story: "When one color just isn't enough! Rainbow brings all the colors together to dance across your drawing, creating magical trails of color with every stroke.",
-      inspiration: "The way rainbows appear after the rain, promising adventure and spreading joy",
+      story: "Can't pick just one? Rainbow mode cycles through our favorite colors in a cheerful rainbow pattern!",
+      inspiration: "The playful way colors dance together in the sky",
       pairsWith: [], // Rainbow mode works with everything!
     };
   

@@ -12,6 +12,10 @@ import { PreviewDialog } from '../dialogs/Gallery/PreviewDialog';
 import { SavedDrawing } from '@/types/shared';
 import { formatFriendlyDate } from '@/lib/formatDate';
 
+interface DownloadError extends Error {
+  name: string;
+}
+
 const Gallery = () => {
   const [drawings, setDrawings] = useState<SavedDrawing[]>([]);
   const [loading, setLoading] = useState(true);
@@ -46,6 +50,42 @@ const Gallery = () => {
       setDrawingToDelete(null);
     } catch (error) {
       console.error('Error deleting drawing:', error);
+    }
+  };
+
+  const handleDownload = async (drawing: SavedDrawing, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Simple mobile detection - could be enhanced if needed
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    try {
+      if (isMobile && navigator.share) {
+        // Mobile experience with share sheet
+        const response = await fetch(drawing.dataUrl);
+        const blob = await response.blob();
+        const file = new File([blob], `scribble-${drawing.id}.png`, { type: 'image/png' });
+        
+        try {
+          await navigator.share({
+            files: [file],
+            title: 'Share Drawing',
+            text: 'Check out my drawing from Scribble Scrabble!'
+          });
+        } catch (error) {
+          // If share is cancelled, do nothing
+          console.log('Share cancelled or failed');
+        }
+      } else {
+        // Desktop experience - simple download
+        const link = document.createElement('a');
+        link.href = drawing.dataUrl;
+        link.download = `scribble-${drawing.id}.png`;
+        link.click();
+      }
+    } catch (error) {
+      console.error('Error handling download:', error);
     }
   };
 
@@ -106,15 +146,13 @@ const Gallery = () => {
                       >
                         <FontAwesomeIcon icon={faTrash} className="w-5 h-5 text-gray-800" />
                       </button>
-                      <a
-                        href={drawing.dataUrl}
-                        download={`scribble-${drawing.id}.png`}
+                      <button
+                        onClick={(e) => handleDownload(drawing, e)}
                         className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
                         title="Download"
-                        onClick={e => e.stopPropagation()}
                       >
                         <FontAwesomeIcon icon={faDownload} className="w-5 h-5 text-gray-800" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -140,6 +178,7 @@ const Gallery = () => {
           setDrawingToDelete(drawings.find(d => d.id === id) || null);
         }}
         onNavigate={setPreviewDrawing}
+        onDownload={handleDownload}
       />
 
       <Footer />

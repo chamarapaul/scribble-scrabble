@@ -20,7 +20,7 @@ export const ColorDialog = ({
     rainbowMode
 }: ColorDialogProps) => {
     return (
-        <BaseDialog open={open} onOpenChange={onOpenChange} title={'Meet the Colors!'}>
+        <BaseDialog open={open} onOpenChange={onOpenChange} title={'Color Stories'}>
             <div className="space-y-4 max-h-[80vh] overflow-y-auto">
 
                 <div className="space-y-2">

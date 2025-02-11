@@ -3,11 +3,11 @@
 
 import { BaseDialog } from '@/components/dialogs/Base/BaseDialog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faTrash, 
-  faDownload, 
-  faChevronLeft, 
-  faChevronRight 
+import {
+  faTrash,
+  faDownload,
+  faChevronLeft,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 import { SavedDrawing } from '@/types/shared';
 import { formatFriendlyDate } from '@/lib/formatDate';
@@ -19,15 +19,17 @@ interface PreviewDialogProps {
   drawings: SavedDrawing[];
   onDelete: (id: string) => void;
   onNavigate: (drawing: SavedDrawing) => void;
+  onDownload: (drawing: SavedDrawing, e: React.MouseEvent) => Promise<void>;
 }
 
-export const PreviewDialog = ({ 
-  open, 
-  onOpenChange, 
-  drawing, 
+export const PreviewDialog = ({
+  open,
+  onOpenChange,
+  drawing,
   drawings,
   onDelete,
-  onNavigate
+  onNavigate,
+  onDownload,
 }: PreviewDialogProps) => {
   if (!drawing) return null;
 
@@ -44,8 +46,8 @@ export const PreviewDialog = ({
   };
 
   return (
-    <BaseDialog 
-      open={open} 
+    <BaseDialog
+      open={open}
       onOpenChange={onOpenChange}
       title={''}
     >
@@ -53,8 +55,8 @@ export const PreviewDialog = ({
         {/* Image Container */}
         <div className="flex-grow relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
-            <img 
-              src={drawing.dataUrl} 
+            <img
+              src={drawing.dataUrl}
               alt="Drawing Preview"
               className="max-w-full max-h-full object-contain mx-auto"
             />
@@ -71,9 +73,8 @@ export const PreviewDialog = ({
                   const prevDrawing = handleNavigation('prev');
                   if (prevDrawing) onNavigate(prevDrawing);
                 }}
-                className={`p-2 rounded-lg transition-colors ${
-                  hasPrev ? 'hover:bg-gray-100 text-gray-800' : 'text-gray-300'
-                }`}
+                className={`p-2 rounded-lg transition-colors ${hasPrev ? 'hover:bg-gray-100 text-gray-800' : 'text-gray-300'
+                  }`}
                 disabled={!hasPrev}
                 aria-label="Previous drawing"
               >
@@ -84,9 +85,8 @@ export const PreviewDialog = ({
                   const nextDrawing = handleNavigation('next');
                   if (nextDrawing) onNavigate(nextDrawing);
                 }}
-                className={`p-2 rounded-lg transition-colors ${
-                  hasNext ? 'hover:bg-gray-100 text-gray-800' : 'text-gray-300'
-                }`}
+                className={`p-2 rounded-lg transition-colors ${hasNext ? 'hover:bg-gray-100 text-gray-800' : 'text-gray-300'
+                  }`}
                 disabled={!hasNext}
                 aria-label="Next drawing"
               >
@@ -109,14 +109,13 @@ export const PreviewDialog = ({
             >
               <FontAwesomeIcon icon={faTrash} className="w-5 h-5 text-gray-800" />
             </button>
-            <a
-              href={drawing.dataUrl}
-              download={`scribble-${drawing.id}.png`}
+            <button
+              onClick={(e) => onDownload(drawing, e)}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
               title="Download"
             >
               <FontAwesomeIcon icon={faDownload} className="w-5 h-5 text-gray-800" />
-            </a>
+            </button>
           </div>
         </div>
       </div>

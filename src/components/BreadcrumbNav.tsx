@@ -21,7 +21,7 @@ export const BreadcrumbNav = ({ currentPage }: BreadcrumbNavProps) => {
           <span className="font-fredoka">Back to Drawing</span>
         </Link>
         <span className="text-gray-800 font-fredoka mx-2">/</span>
-        <span className="text-gray-800 font-fredoka font-semibold mx-1">{currentPage}</span>
+        <span className="text-gray-800 font-fredoka font-semibold text-lg mx-1">{currentPage}</span>
       </div>
     </nav>
   );

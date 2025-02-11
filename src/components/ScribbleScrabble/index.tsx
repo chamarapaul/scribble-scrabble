@@ -53,6 +53,7 @@ const ScribbleScrabble = () => {
   };
 
   const handleClear = () => {
+    if (undoStack.length === 0) return;
     setUndoStack([]);
     setRedoStack([]);
   };
@@ -74,6 +75,8 @@ const ScribbleScrabble = () => {
   };
 
   const handleSave = async () => {
+    if (undoStack.length === 0) return;
+    
     const canvas = document.querySelector('canvas');
     if (!canvas) return;
 
@@ -131,6 +134,7 @@ const ScribbleScrabble = () => {
         onInfo={() => setShowInfo(true)}
         canUndo={undoStack.length > 0}
         canRedo={redoStack.length > 0}
+        hasContent={undoStack.length > 0}  
       />
 
       <Canvas
