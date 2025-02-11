@@ -1,0 +1,44 @@
+# THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+
+This project uses the following third-party software:
+
+## Next.js
+License: MIT License
+Copyright (c) Vercel, Inc.
+https://github.com/vercel/next.js/blob/canary/license.md
+
+## React
+License: MIT License
+Copyright (c) Facebook, Inc. and its affiliates.
+https://github.com/facebook/react/blob/main/LICENSE
+
+## TypeScript
+License: Apache License 2.0
+Copyright (c) Microsoft Corporation
+https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt
+
+## Tailwind CSS
+License: MIT License
+Copyright (c) Tailwind Labs, Inc.
+https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE
+
+## shadcn/ui
+License: MIT License
+Copyright (c) 2023 shadcn
+https://github.com/shadcn-ui/ui/blob/main/LICENSE.md
+
+## Font Awesome
+License: Font Awesome Free License
+Copyright (c) Fonticons, Inc.
+https://fontawesome.com/license/free
+
+## Fredoka Font
+License: Open Font License
+Copyright (c) 2011-2022 Variable Font Project Authors
+https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+## Crayon Icon
+Created by Hafiz Nur Lutfianto
+Source: Noun Project
+License: Creative Commons Attribution 3.0 (CC BY 3.0)
+https://creativecommons.org/licenses/by/3.0/
