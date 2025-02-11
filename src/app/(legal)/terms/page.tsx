@@ -84,7 +84,16 @@ const TermsPage: FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4 text-gray-800">6. Changes to Terms</h2>
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">6. Credits and Attribution</h2>
+              <ul className="space-y-2 text-gray-600 list-disc pl-5">
+                <li>The crayon icon used in It&apos;s Scribble Scrabble Time&apos;s branding was created by Hafiz Nur Lutfianto from Noun Project (CC BY 3.0)</li>
+                <li>All other visual elements and designs are original creations for It&apos;s Scribble Scrabble Time</li>
+                <li>Third-party libraries and frameworks are used under their respective licenses</li>
+              </ul>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">7. Changes to Terms</h2>
               <ul className="space-y-2 text-gray-600 list-disc pl-5">
                 <li>We reserve the right to modify these terms as features and functionality evolve</li>
                 <li>Continued use of It&apos;s Scribble Scrabble Time after changes indicates acceptance of updated terms</li>

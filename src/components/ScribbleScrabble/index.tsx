@@ -5,11 +5,12 @@ import { useState, useCallback } from 'react';
 import { Header } from './Header';
 import { Canvas } from './Canvas';
 import { ColorPalette } from './ColorPalette';
-import { SaveDialog } from './SaveDialog';
-import { ColorDialog } from './ColorDialog';
-import { InfoDialog } from './InfoDialog';
-import { RAINBOW_COLORS, SavedDrawing } from './constants';
-import type { DrawingState, Point } from './types';
+import { SaveDialog } from '../dialogs/Drawing/SaveDialog';
+import { ColorDialog } from '../dialogs/Drawing/ColorDialog';
+import { InfoDialog } from '../dialogs/Drawing/InfoDialog';
+import { RAINBOW_COLORS } from '@/constants/colors';
+import { SavedDrawing } from '@/types/shared';
+import type { DrawingState, Point } from '@/types/drawing';
 
 const ScribbleScrabble = () => {
   const [currentColor, setCurrentColor] = useState('');

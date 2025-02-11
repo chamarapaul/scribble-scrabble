@@ -1,7 +1,7 @@
-// src/components/Gallery/PreviewDialog.tsx
+// src/components/dialogs/Gallery/PreviewDialog.tsx
 'use client';
 
-import { BaseDialog } from '@/components/BaseDialog';
+import { BaseDialog } from '@/components/dialogs/Base/BaseDialog';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faTrash, 
@@ -9,7 +9,7 @@ import {
   faChevronLeft, 
   faChevronRight 
 } from '@fortawesome/free-solid-svg-icons';
-import { SavedDrawing } from './types';
+import { SavedDrawing } from '@/types/shared';
 import { formatFriendlyDate } from '@/lib/formatDate';
 
 interface PreviewDialogProps {

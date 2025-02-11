@@ -1,7 +1,7 @@
-// src/components/ScribbleScrabble/InfoDialog.tsx
+// src/components/dialogs/Drawing/InfoDialog.tsx
 'use client';
 
-import { BaseDialog } from '../BaseDialog';
+import { BaseDialog } from '../Base/BaseDialog';
 import { ActionList } from './ActionList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -11,7 +11,7 @@ import {
   faTrashCan,
   faHeart
 } from '@fortawesome/free-solid-svg-icons';
-import { COLOR_MAP } from './constants';
+import { COLOR_MAP } from '@/constants/colors';
 
 interface InfoDialogProps {
   open: boolean;

@@ -1,7 +1,7 @@
-// src/components/Gallery/DeleteDialog.tsx
+// src/components/dialogs/Gallery/DeleteDialog.tsx
 'use client';
 
-import { BaseDialog } from '@/components/BaseDialog';
+import { BaseDialog } from '@/components/dialogs/Base/BaseDialog';
 
 interface DeleteDialogProps {
   open: boolean;

@@ -2,8 +2,8 @@
 'use client';
 
 import { useRef, useEffect, useCallback } from 'react';
-import type { Point, DrawingState } from './types'
-import { RAINBOW_COLORS } from './constants';
+import type { Point, DrawingState } from '@/types/drawing';
+import { RAINBOW_COLORS } from '@/constants/colors';
 
 interface CanvasProps {
   undoStack: DrawingState[];

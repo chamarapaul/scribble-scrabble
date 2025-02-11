@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faDownload } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { BreadcrumbNav } from '../BreadcrumbNav';
-import { DeleteDialog } from './DeleteDialog';
-import { PreviewDialog } from './PreviewDialog';
-import { SavedDrawing } from './types';
+import { DeleteDialog } from '../dialogs/Gallery/DeleteDialog';
+import { PreviewDialog } from '../dialogs/Gallery/PreviewDialog';
+import { SavedDrawing } from '@/types/shared';
 import { formatFriendlyDate } from '@/lib/formatDate';
 
 const Gallery = () => {

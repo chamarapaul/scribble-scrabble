@@ -1,4 +1,4 @@
-// src/components/ScribbleScrabble/SaveDialog.tsx
+// src/components/dialogs/Drawing/SaveDialog.tsx
 'use client';
 
 import {

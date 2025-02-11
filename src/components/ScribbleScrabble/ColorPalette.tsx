@@ -2,8 +2,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { COLORS, RAINBOW_GRADIENT } from './constants';
-import type { Color } from './types';
+import { COLORS, RAINBOW_GRADIENT } from '@/constants/colors';
+import type { Color } from '@/types/drawing';
 
 interface ColorPaletteProps {
   currentColor: string;

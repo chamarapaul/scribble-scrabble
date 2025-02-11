@@ -1,4 +1,4 @@
-// src/components/Gallery/types.ts
+// src/types/shared.ts
 export interface SavedDrawing {
     id: string;
     dataUrl: string;

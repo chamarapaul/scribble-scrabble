@@ -20,6 +20,9 @@ A fun web-based drawing application inspired by childhood creativity. It provide
 ## Built With
 Next.js, React, TypeScript, and lots of ❤️
 
+## Credits
+- Crayon icon created by ![Hafiz Nur Lutfianto](https://thenounproject.com/creator/hafizcreative.id) from ![Noun Project](https://thenounproject.com/) (CC BY 3.0)
+
 ## License
 The source code for It's Scribble Scrabble Time is licensed under the MIT License. See the LICENSE file for details. 
 

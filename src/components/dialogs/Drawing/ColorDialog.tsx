@@ -1,8 +1,8 @@
-// src/components/ScribbleScrabble/ColorDialog.tsx
+// src/components/dialogs/Drawing/ColorDialog.tsx
 'use client';
 
-import { BaseDialog } from '../BaseDialog';
-import { COLOR_STORIES, RAINBOW_STORY } from './colorStories';
+import { BaseDialog } from '../Base/BaseDialog';
+import { COLOR_STORIES, RAINBOW_STORY } from '@/constants/colors';
 
 interface ColorDialogProps {
     open: boolean;

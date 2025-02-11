@@ -1,4 +1,4 @@
-// src/components/BaseDialog.tsx
+// src/components/dialogs/Base/BaseDialog.tsx
 'use client';
 
 import {
