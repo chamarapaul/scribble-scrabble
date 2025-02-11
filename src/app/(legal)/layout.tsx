@@ -1,6 +1,6 @@
 // src/app/(legal)/page.tsx
 export const metadata = {
-    title: "Legal | It's Scribble Scrabble Time!",
+    title: "Legal",
     description: "Legal information for It's Scribble Scrabble Time, a web-based drawing application.",
   };
   

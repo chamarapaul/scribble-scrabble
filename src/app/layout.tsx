@@ -2,11 +2,15 @@
 import type { Metadata, Viewport } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
+import { VersionChecker } from "@/components/VersionChecker";
+
+const isDev = process.env.NODE_ENV === 'development';
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  themeColor: "#FFFFFF",
 };
 
 const fredoka = Fredoka({
@@ -16,11 +20,11 @@ const fredoka = Fredoka({
 
 export const metadata: Metadata = {
   title: {
-    default: "It's Scribble Scrabble Time!",
-    template: "%s | It's Scribble Scrabble Time!"
+    default: isDev ? "[Dev] It's Scribble Scrabble Time!" : "It's Scribble Scrabble Time!",
+    template: `%s | ${isDev ? "[Dev] It's Scribble Scrabble Time!" : "It's Scribble Scrabble Time!"}`,
   },
   description: "A delightful drawing app for kids and the young at heart! Express your creativity with rainbow colors on a simple touch-friendly canvas. It's time to scribble scrabble, and let your imagination soar!",
-  
+
   // Open Graph
   openGraph: {
     title: "It's Scribble Scrabble Time!",
@@ -48,7 +52,13 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "ScribbleScrabble",
+    title: isDev ? "[Dev] Scribble Scrabble" : "Scribble Scrabble",
+    // startupImage: [
+    //   {
+    //     url: "/splash/apple-splash-2048-2732.jpg",
+    //     media: "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)",
+    //   },
+    // ],
   },
 };
 
@@ -59,7 +69,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fredoka.variable}>{children}</body>
+      <head>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta 
+          name="apple-mobile-web-app-title" 
+          content={isDev ? "[Dev] Scribble Scrabble" : "Scribble Scrabble"} 
+        />
+        {/* <link rel="apple-touch-startup-image" href="/splash/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" /> */}
+      </head>
+      <body className={fredoka.variable}>
+        {children}
+        <VersionChecker />
+      </body>
     </html>
   );
 }

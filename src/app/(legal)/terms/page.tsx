@@ -22,7 +22,7 @@ const TermsPage: FC = () => {
             className="inline-flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-800"
           >
             <FontAwesomeIcon icon={faArrowLeft} className="w-5 h-5" />
-            <span className="font-fredoka">Back to Drawing</span>
+            <span className="font-fredoka font-medium">Back to Drawing</span>
           </Link>
         </div>
       </nav>
@@ -108,7 +108,7 @@ const TermsPage: FC = () => {
                 If you have any questions about these terms, please contact us at{' '}
                 <a 
                   href="mailto:hello@itsscribblescrabbletime.com" 
-                  className="text-gray-600 hover:text-gray-800 transition-colors underline"
+                  className="text-gray-600 hover:underline transition-colors"
                 >
                   hello@itsscribblescrabbletime.com
                 </a>

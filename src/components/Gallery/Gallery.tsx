@@ -12,10 +12,6 @@ import { PreviewDialog } from '../dialogs/Gallery/PreviewDialog';
 import { SavedDrawing } from '@/types/shared';
 import { formatFriendlyDate } from '@/lib/formatDate';
 
-interface DownloadError extends Error {
-  name: string;
-}
-
 const Gallery = () => {
   const [drawings, setDrawings] = useState<SavedDrawing[]>([]);
   const [loading, setLoading] = useState(true);
@@ -75,7 +71,7 @@ const Gallery = () => {
           });
         } catch (error) {
           // If share is cancelled, do nothing
-          console.log('Share cancelled or failed');
+          console.log('Share cancelled or failed:', error);
         }
       } else {
         // Desktop experience - simple download

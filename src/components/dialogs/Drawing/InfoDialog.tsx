@@ -2,64 +2,77 @@
 'use client';
 
 import { BaseDialog } from '../Base/BaseDialog';
-import { ActionList } from './ActionList';
+import { InstallInstructions } from './InstallInstructions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faPalette,
   faPencil,
-  faRotateLeft,
+  faRotate,
   faTrashCan,
-  faHeart
 } from '@fortawesome/free-solid-svg-icons';
-import { COLOR_MAP } from '@/constants/colors';
 
 interface InfoDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-export const InfoDialog = ({ open, onOpenChange }: InfoDialogProps) => {
-  const actions = [
-    {
-      icon: faPalette,
-      iconColor: COLOR_MAP.berryPink,
-      label: 'Pick from the color palette, or try rainbow mode for extra fun!'
-    },
-    {
-      icon: faPencil,
-      iconColor: COLOR_MAP.grassGreen,
-      label: 'Start scribble scrabbling away!'
-    },
-    {
-      icon: faRotateLeft,
-      iconColor: COLOR_MAP.skyBlue,
-      label: 'Made a mistake? No worries! Use undo/redo to fix it.'
-    },
-    {
-      icon: faTrashCan,
-      iconColor: COLOR_MAP.magicPurple,
-      label: 'Want to start fresh? Clear the canvas anytime.'
-    }
-  ];
+const actions = [
+  {
+    icon: faPalette,
+    label: 'Pick from the color palette, or try rainbow mode for extra fun!',
+    // Muted bubble gum
+    color: 'rgb(233, 30, 99, 0.8)'
+  },
+  {
+    icon: faPencil,
+    label: 'Start scribble scrabbling away!',
+    // Muted mermaid tail
+    color: 'rgb(0, 150, 136, 0.8)'
+  },
+  {
+    icon: faRotate,
+    label: 'Made a mistake? No worries! Use undo/redo to fix it.',
+    // Muted magic purple
+    color: 'rgb(156, 39, 176, 0.8)'
+  },
+  {
+    icon: faTrashCan,
+    label: 'Want to start fresh? Clear the canvas anytime.',
+    color: 'rgb(75, 85, 99, 0.9)' // Softer gray
+  }
+];
 
+export const InfoDialog = ({ open, onOpenChange }: InfoDialogProps) => {
   return (
     <BaseDialog
       open={open}
       onOpenChange={onOpenChange}
-      title="How to Play: It's Scribble Scrabble Time!"
+      title="How to Play"
     >
-      <p className="text-lg text-gray-700 font-fredoka">
-        Let your creativity flow! Scribble Scrabble is all about having fun and expressing yourself through drawing.
-      </p>
-      
-      <div className="bg-gray-50 p-6 rounded-lg">
-        <ActionList actions={actions} />
-      </div>
+      <div className="overflow-y-auto max-h-[60vh]">
+        <p className="text-lg text-gray-700 font-fredoka mb-6">
+          Let your creativity flow! It&apos;s Scribble Scrabble Time is all about having fun and expressing yourself through drawing.
+        </p>
+        
+        <div className="bg-gray-50 p-6 rounded-lg mb-6">
+          {actions.map((action, index) => (
+            <div key={index} className="flex items-center gap-3 mb-4 last:mb-0">
+              <span className="w-10 h-10 flex items-center justify-center bg-white rounded-lg shadow-sm">
+                <FontAwesomeIcon 
+                  icon={action.icon} 
+                  className="w-5 h-5"
+                  style={{ color: action.color }}
+                />
+              </span>
+              <span className="font-fredoka flex-1 text-gray-700">
+                {action.label}
+              </span>
+            </div>
+          ))}
+        </div>
 
-      <p className="text-gray-600 text-sm text-center mx-14 font-fredoka">
-        Created with<FontAwesomeIcon icon={faHeart} className="mx-1" style={{ color: COLOR_MAP.bubbleGum }}/> 
-        for all the kids (and kids at heart) who love to create, doodle, and express their creativity.
-      </p>
+        <InstallInstructions />
+      </div>
     </BaseDialog>
   );
 };

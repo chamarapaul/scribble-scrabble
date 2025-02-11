@@ -12,22 +12,19 @@ interface ColorDialogProps {
     rainbowMode?: boolean;
 }
 
-export const ColorDialog = ({
-    open,
-    onOpenChange,
-    onColorSelect,
-    onRainbowToggle,
-    rainbowMode
-}: ColorDialogProps) => {
+export const ColorDialog = ({ open, onOpenChange, onColorSelect, onRainbowToggle, rainbowMode }: ColorDialogProps) => {
     return (
-        <BaseDialog open={open} onOpenChange={onOpenChange} title={'Color Stories'}>
-            <div className="space-y-4 max-h-[80vh] overflow-y-auto">
-
-                <div className="space-y-2">
+        <BaseDialog
+            open={open}
+            onOpenChange={onOpenChange}
+            title="Color Stories"
+        >
+            <div className="overflow-y-auto max-h-[60vh]">
+                <div className="space-y-4">
                     {COLOR_STORIES.map((colorStory) => (
                         <div
                             key={colorStory.name}
-                            className="flex items-start gap-4 md:p-4 p-2 rounded-lg transition-colors"
+                            className="flex items-start gap-4 p-2 rounded-lg transition-colors"
                         >
                             {/* Color Sample */}
                             <button

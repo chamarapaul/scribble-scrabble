@@ -26,7 +26,7 @@ export const BaseDialog = ({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] bg-white [&>button]:hidden">
-        <div className="absolute right-4 top-4">
+        <div className="absolute right-4 top-4 md:mt-0 -mt-1">
           <button
             onClick={() => onOpenChange(false)}
             className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-100 transition-colors"
@@ -35,7 +35,7 @@ export const BaseDialog = ({
           </button>
         </div>
         
-        <DialogHeader>
+        <DialogHeader className="mt-4">
           <DialogTitle className="text-3xl font-fredoka text-gray-800">
             {title}
           </DialogTitle>
