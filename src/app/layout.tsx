@@ -21,7 +21,8 @@ const fredoka = Fredoka({
 export const metadata: Metadata = {
   title: {
     default: isDev ? "[Dev] It's Scribble Scrabble Time!" : "It's Scribble Scrabble Time!",
-    template: `%s | ${isDev ? "[Dev] It's Scribble Scrabble Time!" : "It's Scribble Scrabble Time!"}`,
+    template: isDev ? `[Dev] %s | It's Scribble Scrabble Time!"` : `%s | "It's Scribble Scrabble Time!"}`,
+  
   },
   description: "A delightful drawing app for kids and the young at heart! Express your creativity with rainbow colors on a simple touch-friendly canvas. It's time to scribble scrabble, and let your imagination soar!",
 
