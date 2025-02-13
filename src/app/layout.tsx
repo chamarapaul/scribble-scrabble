@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 import { VersionChecker } from "@/components/VersionChecker";
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -82,6 +83,7 @@ export default function RootLayout({
       <body className={fredoka.variable}>
         {children}
         <VersionChecker />
+        <Analytics />
       </body>
     </html>
   );
