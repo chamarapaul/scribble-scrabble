@@ -36,7 +36,7 @@ interface ActionButtonProps {
 
 const ActionButton = ({ onClick, disabled, title, icon, isLink, href }: ActionButtonProps) => {
   const iconClass = "w-5 h-5";
-  const buttonClass = "p-2 rounded-lg transition-colors";
+  const buttonClass = "p-2 rounded-lg transition-colors no-select";
   const activeButtonClass = "text-gray-800 hover:bg-gray-100 active:bg-gray-200";
   const disabledButtonClass = "text-gray-300 cursor-not-allowed";
   const className = `${buttonClass} ${disabled ? disabledButtonClass : activeButtonClass}`;
@@ -106,7 +106,7 @@ export const Header = ({
   );
   
   return (
-    <div className="bg-white border-b">
+    <div className="bg-white border-b drawing-ui no-select">
       {/* Mobile Layout */}
       <div className="md:hidden">
         <div className="px-4 py-2">

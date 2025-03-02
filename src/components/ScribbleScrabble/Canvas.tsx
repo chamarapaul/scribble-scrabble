@@ -107,6 +107,9 @@ export const Canvas = ({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Prevent default to avoid selection issues
+    e.preventDefault();
+    
     const rect = canvas.getBoundingClientRect();
     const point = getPointFromEvent(e, rect);
 
@@ -121,6 +124,9 @@ export const Canvas = ({
   const draw = (e: React.MouseEvent | React.TouchEvent) => {
     if (!isDrawing.current) return;
 
+    // Prevent default to avoid selection issues
+    e.preventDefault();
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -145,7 +151,12 @@ export const Canvas = ({
     }
   };
 
-  const stopDrawing = () => {
+  const stopDrawing = (e: React.MouseEvent | React.TouchEvent) => {
+    // Prevent default to avoid selection issues
+    if (e.type !== 'mouseout') {
+      e.preventDefault();
+    }
+    
     if (isDrawing.current && currentPath.current.length > 0) {
       onDraw(currentPath.current);
     }
@@ -154,7 +165,7 @@ export const Canvas = ({
   };
 
   return (
-    <div className="flex-grow relative">
+    <div className="flex-grow relative drawing-ui no-select">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 touch-none"

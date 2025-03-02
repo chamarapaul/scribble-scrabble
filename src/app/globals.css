@@ -77,3 +77,19 @@ body {
     font-family: var(--font-fredoka);
   }
 }
+
+/* Prevent text selection utility class */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* For specific elements that shouldn't be selectable when dragging */
+.drawing-ui {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

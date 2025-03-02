@@ -1,4 +1,4 @@
-// src/components/ColorPalette.tsx
+// src/components/ScribbleScrabble/ColorPalette.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -36,7 +36,7 @@ export const ColorPalette = ({
   }, [onColorSelect]); // Add onColorSelect to dependencies
 
   return (
-    <div className="bg-white border-t p-4">
+    <div className="bg-white border-t p-4 drawing-ui no-select">
       <div className="flex flex-wrap justify-center gap-2">
         {randomizedColors.map(({ color, name }) => (
           <button

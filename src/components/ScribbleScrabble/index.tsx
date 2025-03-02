@@ -124,7 +124,7 @@ const ScribbleScrabble = () => {
   };
 
   return (
-    <div className="fixed inset-0 flex flex-col bg-white">
+    <div className="fixed inset-0 flex flex-col bg-white drawing-ui no-select">
       <Header
         onUndo={handleUndo}
         onRedo={handleRedo}

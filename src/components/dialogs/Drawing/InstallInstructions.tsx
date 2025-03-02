@@ -44,7 +44,7 @@ export const InstallInstructions = () => {
       <FontAwesomeIcon 
           icon={faMobileScreen} 
           className="w-5 h-5"
-          style={{ color: 'rgb(75, 85, 99, 0.9)' }}
+          style={{ color: 'text-gray-800' }}
         />
         To Install on your Device:
       </h3>
