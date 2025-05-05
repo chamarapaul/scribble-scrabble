@@ -2,6 +2,13 @@ import { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  
+  // Make package.json version available as an environment variable during build
+  env: {
+    NEXT_PUBLIC_APP_VERSION: require('./package.json').version,
+  },
+  
+  // Existing security headers
   async headers() {
     return [
       {
